@@ -1,0 +1,9 @@
+---
+title: "My document"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+---
+
+This is a test of the preview

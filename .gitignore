@@ -6,3 +6,5 @@
 .DS_Store
 slides_files/*
 slides.html
+report_files/*
+report.html
