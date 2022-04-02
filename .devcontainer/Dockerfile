@@ -56,6 +56,11 @@ RUN echo "RENV_PATHS_CACHE=/renv/cache" >> /usr/local/lib/R/etc/Renviron
 # copy the modified .Rprofile template to the renv cache
 COPY library-scripts/.Rprofile-vscode /renv/.Rprofile-vscode
 
+# [Optional] Uncomment this section to add Quarto to the container
+# customize version number as appropriate
+RUN curl -L https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.172/quarto-0.9.172-linux-amd64.deb -o /tmp/quarto.deb
+RUN apt-get -y install ./tmp/quarto.deb
+
 # [Optional] Uncomment this section to add Hugo to the container
 # Customize version number as appropriate
 #RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.87.0/hugo_extended_0.87.0_Linux-64bit.deb -o /tmp/hugo.deb
